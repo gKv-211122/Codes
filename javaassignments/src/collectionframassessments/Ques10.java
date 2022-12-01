@@ -18,15 +18,16 @@ public class Ques10 {
 		countries.put("Australia", "Canberra");
 		
 		
-		Map map= Collections.synchronizedMap(countries);
-	    Set set = map.entrySet();
+		Map<String, String> map= Collections.synchronizedMap(countries);
+	    Set<?> set = map.entrySet();
 	    
 	    synchronized(map){
-	        Iterator i = set.iterator();
+	        Iterator<?> i = set.iterator();
 	        
 	        while(i.hasNext()) {
 	        	
-	            Map.Entry pair = (Map.Entry)i.next();
+	            @SuppressWarnings("rawtypes")
+				Map.Entry pair = (Map.Entry)i.next();
 	            System.out.print(pair.getKey() + ": ");
 	            System.out.println(pair.getValue());
 	        }

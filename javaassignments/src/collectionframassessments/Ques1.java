@@ -10,6 +10,7 @@ import java.util.Set;
 
 public class Ques1 {
 
+	@SuppressWarnings("unchecked")
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
@@ -17,7 +18,8 @@ public class Ques1 {
 		// Ques1. Wite a Java program to create read only data using List, Set and Map in example
 		
 		// -------------------- read oly list -----------------------
-		List readOnlyList = new ArrayList();
+		@SuppressWarnings("rawtypes")
+		List<Comparable> readOnlyList = new ArrayList();
 		
 		
 		readOnlyList.add("data");
@@ -39,7 +41,8 @@ public class Ques1 {
 		System.out.println(readOnlyList);
 		
 		// --------------- read only set ----------------------
-		Set readOnlySet = new HashSet<>(readOnlyList);
+		@SuppressWarnings("rawtypes")
+		Set<Comparable> readOnlySet = new HashSet<>(readOnlyList);
 		
 		readOnlySet.add("set");
 		
@@ -65,7 +68,8 @@ public class Ques1 {
 		
 		// making the map read-only
 		
-		 Map readOnlyMap = Collections.unmodifiableMap(countries);
+		@SuppressWarnings("unused")
+		Map<?, ?> readOnlyMap = Collections.unmodifiableMap(countries);
 		
 		// readOnlyMap.put("Russia", 100);  -- error
 		
