@@ -15,6 +15,10 @@ public class Lists {
 		lst.add(2);
 		lst.add(101);
 		
+		
+		// use arrayList methods
+		lst.set(2, 8888);
+		
 		System.out.println("List: " + lst);
 		
 		// Access element from the list
@@ -66,6 +70,10 @@ public class Lists {
           System.out.print(", ");
         }
 		 
+        
+        str.remove(1);
+        
+        str.removeAll(str);
 		 
 		
 
