@@ -13,6 +13,7 @@ class ABC implements Runnable {
 		catch (InterruptedException ie)  {  
 			
 			ie.printStackTrace();  
+			
 		}  
   
   
@@ -48,12 +49,12 @@ public class MyThread1 implements Runnable {
 		// The thread t1 is currently in the NEW state.  
 		System.out.println("The state of thread t1 after spawning it - " + t1.getState());  
   
-
 		t1.start();  
   
-// thread t1 is moved to the Runnable state  
-		System.out.println("The state of thread t1 after invoking the method start() on it - " + t1.getState());  
-}  
+        // thread t1 is moved to the Runnable state  
+		System.out.println("The state of thread t1 after invoking the"
+				+ " method start() on it - " + t1.getState());  
+	}  
   
 	public void run() {  
 	
@@ -72,10 +73,12 @@ public class MyThread1 implements Runnable {
 		try {  
 
 			Thread.sleep(200);  
+			
 		}  
 		catch (InterruptedException ie) {  
 		
 			ie.printStackTrace();  
+			                                                                                                                   
 		}  
   
 		System.out.println("The state of thread t2 after invoking "
@@ -84,11 +87,13 @@ public class MyThread1 implements Runnable {
  
 		try {  
 
-			t2.join();  
+			t2.join(); 
+			
 		}  
 		catch (InterruptedException ie) {  
 		
 			ie.printStackTrace();  
+			
 		}  
 		
 		System.out.println("The state of thread t2 when it has"
