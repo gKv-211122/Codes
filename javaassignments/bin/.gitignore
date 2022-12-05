@@ -1,5 +1,4 @@
-/anonymousclass/
-/assessments/
+/java8/
 /collectionframassessments/
 /collectionmap/
 /collectionsframework/
@@ -15,7 +14,9 @@
 /regularexpression/
 /serialization/
 /strings/
+/synchronizations/
 /training/
 /wrapperclass/
-/module-info.class
-/synchronizations/
+/singletonclass.class
+/singleton/
+/transientsmodifier/

@@ -10,7 +10,7 @@ public class SerializationDemo {
 		  try{    
 			  
 			  //Creating the object    
-			  Student s1 =new Student(211,"ravi");    
+			  Student s1 =new Student(211,"ravi", 21);    
 		  
 			  //Creating stream and writing the object    
 			  FileOutputStream fout=new FileOutputStream("f.txt");    
