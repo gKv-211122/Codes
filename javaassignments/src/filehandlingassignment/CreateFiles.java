@@ -1,17 +1,16 @@
-package iofiles;
+package filehandlingassignment;
 
 import java.io.File;
 import java.io.IOException;
 
-public class CreateTheFile {
+public class CreateFiles {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		// create a file object for the current location
 		try {
 			
-		      File myObj = new File("filename.txt");
+		      File myObj = new File("EmployeeData.txt");
 		      
 		      if (myObj.createNewFile()) {
 		    	  
@@ -29,6 +28,7 @@ public class CreateTheFile {
 		      
 		      e.printStackTrace();
 		    }
+
 
 	}
 

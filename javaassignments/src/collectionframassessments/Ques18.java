@@ -5,7 +5,7 @@ import java.util.*;
 public class Ques18 {
 	
 	
-	public static void stringLowerUpper(ArrayList <String> str) {
+	/*public static void stringLowerUpper(ArrayList <String> str) {
 		
 		
 		Collections.sort(str);  // sort alphabatically-order
@@ -36,8 +36,97 @@ public class Ques18 {
 	        }
 		}
 		
-//		System.out.println(str1 +" "+ str2);
+		System.out.println(str1 +" "+ str2);*/
 		
+		
+		
+	// }
+	public static void sortAlpha(String [] s) {
+		
+		int n = s.length;
+		
+		//logic for sorting     
+        for(int i = 0; i < n; i++)   //Holds each element
+        {  
+            for (int j = i + 1; j < n; j++)  //Check for remaining elements 
+            {  
+               //compares each elements of the array to all the remaining elements  
+               if(s[i].compareTo(s[j]) > 0)   
+               {  
+                   //swapping array elements  
+                   String temp = s[i];  
+                   s[i] = s[j];  
+                   s[j] = temp;  
+                }  
+             }  
+          }
+        
+        int l = s.length;
+        
+        String [] s1 = new String[s.length / 2];
+    	String [] s2 = new String[s.length / 2];
+    	
+    	int l2 = (s.length / 2) + 1;
+    	
+    	String [] s3 = new String[l2];
+    	String [] s4 = new String[s.length / 2];
+    	
+        if(l % 2 == 0) {
+        	
+        	
+        	for(int i = 0; i < s.length / 2; i++) {
+			
+        	
+        		for(int j = 0; j < s1.length; j++) {
+        		
+        			s1[j] = s[i].toUpperCase();
+        		}
+        	
+        	
+			}
+        	
+        	for(int k = s.length / 2; k < l; k++) {
+        		
+        		for(int m = 0; m < s1.length; m++) {
+            		
+        			s2[m] = s[k].toLowerCase();
+        		}
+        		
+        	}
+        	
+        }else {
+        	
+        		for(int i = 0; i < l2; i++) {
+        		
+        			for(int j = 0; j < s3.length; j++) {
+                		
+            			s3[j] = s[i].toUpperCase();
+            		}
+        		
+        		}
+        		
+        		for(int k = s.length / 2; k < l; k++) {
+            		
+            		for(int m = 0; m < s4.length; m++) {
+                		
+            			s4[m] = s[k].toLowerCase();
+            		}
+            		
+            	}
+        		
+        		for(int c = 0; c < s3.length; c++) {
+        			
+        			System.out.print(s3[c] + " ");
+        			
+        		}
+        	
+        	
+        }
+        
+        
+	}
+	
+	public static void upperLower(String [] st) {
 		
 		
 	}
@@ -58,7 +147,8 @@ public class Ques18 {
 			Note: If there are odd number of String objects, then (n/2)+1 elements should be in UPPPERCASE
 		 	*/
 		
-		ArrayList <String> strs = new ArrayList();
+		// ArrayList <String> strs = new ArrayList();
+		
 		
 		
 		Scanner sc = new Scanner(System.in);
@@ -66,15 +156,19 @@ public class Ques18 {
 		System.out.println("Enter the no of string");
 		int n = sc.nextInt();
 		
+		String [] str = new String[n];
+		
 		System.out.println("Enter string: ");
 		for(int i = 0; i < n; i++) {
 			
-			String s = sc.next();
-			strs.add(s);
+			str[i] = sc.next();
+			
 			
 		}
 		
-		stringLowerUpper(strs);
+		
+		
+		sortAlpha(str);
 		
 		
 		

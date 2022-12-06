@@ -1,14 +1,14 @@
-package iofiles;
+package filehandlingassignment;
 
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class WriteToFile {
+public class WriteFiles {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		 try {
+		try {
 			 
 		      FileWriter myWriter = new FileWriter("EmployeeData.txt");
 		      
@@ -25,6 +25,7 @@ public class WriteToFile {
 		    	
 		      System.out.println("An error occurred.");
 		      e.printStackTrace();
+		      System.out.println("File is None Readable");
 		      
 		    }
 

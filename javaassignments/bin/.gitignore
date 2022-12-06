@@ -1,4 +1,5 @@
-/java8/
+/upcastingdowncasting/
+/assessments/
 /collectionframassessments/
 /collectionmap/
 /collectionsframework/
@@ -9,14 +10,16 @@
 /generics/
 /innerclasses/
 /iofiles/
+/java8/
 /multithreading/
 /objectmethods/
 /regularexpression/
 /serialization/
+/singleton/
 /strings/
 /synchronizations/
 /training/
-/wrapperclass/
-/singletonclass.class
-/singleton/
 /transientsmodifier/
+/wrapperclass/
+/java8assesment/
+/multithreadingassessments/
