@@ -34,8 +34,9 @@ public class DaemonT extends Thread {
         t1.start();   
         t2.start();    
         
-        t3.setDaemon(true);
-        t3.start();    
+        t3.setDaemon(true); 
+        t3.start();   
+        
     }    
 
 }

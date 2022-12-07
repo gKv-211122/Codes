@@ -1,4 +1,4 @@
-/upcastingdowncasting/
+/anonymousclass/
 /assessments/
 /collectionframassessments/
 /collectionmap/
@@ -11,7 +11,10 @@
 /innerclasses/
 /iofiles/
 /java8/
+/java8assesment/
+/module-info.class
 /multithreading/
+/multithreadingassessments/
 /objectmethods/
 /regularexpression/
 /serialization/
@@ -20,6 +23,5 @@
 /synchronizations/
 /training/
 /transientsmodifier/
+/upcastingdowncasting/
 /wrapperclass/
-/java8assesment/
-/multithreadingassessments/
