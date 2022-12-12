@@ -1,13 +1,12 @@
 package collectionframassessments;
 
-class CarCompany {
-	
-	public String brand;
+import java.util.Scanner;
+
+
+class Mercedes {
 	
 	
 }
-
-class Mercedes 
 
 public class Ques14 {
 
@@ -29,6 +28,35 @@ public class Ques14 {
 			have to show the details & generate a txt file with all details.
 			
 			c.Initial data has to be read from Excel file                    */
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter which car you want to buy from below list :");
+		
+		System.out.println(" Click 1 to check about Farari Series");
+		
+		System.out.println(" Click 2 to check about RangeRover Series");
+		
+		System.out.println(" Click 3 to check about Fortuner Series");
+		
+		int s = sc.nextInt();
+		
+		if(s==1) {
+			Farari.ferari();
+		}
+		
+		else if(s==2) {
+			RangeRover.rangeRover();
+			
+		}
+		
+		else if(s==3) {
+			
+			Fortuner.fortuner();
+		}
+		else {
+			throw new InvalidChoiceException();
+		}
 
 	}
 

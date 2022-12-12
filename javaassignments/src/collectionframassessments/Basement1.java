@@ -2,83 +2,72 @@ package collectionframassessments;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class Basement1 {
+			
+		//String [] slots = {"s-1", "s-2", "s-3", "s-4", "s-5", "s-6", "s-7", "s-8","s-9", "s-10", "s-11", "s-12", "s-13", "s-14", "s-15"};
+		
+		List<String> lst1 = new ArrayList<String>(Arrays.asList("s-1", "s-2", "s-3", "s-4", "s-5", "s-6", "s-7", "s-8",
+				"s-9", "s-10", "s-11", "s-12", "s-13", "s-14", "s-15"));
+		
+		public String vehicleId;
+		public int slotChosenByUser;
 	
+		public void bikeSlots(int slotChosenByUser, String vehicleId) {
+			
+			
+			this.slotChosenByUser = slotChosenByUser;
+			this.vehicleId = vehicleId;
 		
-		
-		public int noOfBikes;
-		public int noOfCars;
-	
-		public void bikes(int noOfBikes) {
+			System.out.println("\nOccupied slots By(BIKES, BASEMENT-1:) ");
 			
-			String [] slots = new String[15];
+			//slots[slotChosenByUser - 1] = "Occupied ! [" + vehicleId + "]";
+			//System.out.println("s-" + (slotChosenByUser) + " : " + slots[slotChosenByUser - 1] + "Bike Id - " + vehicleId);
+			System.out.println("s-" + (slotChosenByUser) + " : " + lst1.get(slotChosenByUser - 1) + "Bike Id - " + vehicleId);
 			
-			this.noOfBikes = noOfBikes;
-		
-			System.out.println("For Bike Parking(BASMENT-1):  Total slots are: " + slots.length);
-			for(int i = 0; i < slots.length; i++) {
-			
-				System.out.println("slot-" + (i + 1) + "   ");
-			
-			}
-		
-			System.out.println("\nOccupied slots By(BIKES, BASEMENT-1: ");
-			for(int i = 0; i < noOfBikes; i++) {
-			
-				slots[i] = "Occupied !";
-			
-				System.out.println("slot-" + (i + 1) + " : " + slots[i] + "Bike - " + (i + 1));
+			// remove occupied slot
+//			List<String> list = new ArrayList<String>(Arrays.asList(slots));
+//			list.remove(slotChosenByUser - 1);
+//			
+//			slots = list.toArray(new String[0]);
+			lst1.remove(slotChosenByUser - 1);
 			
 			
-			}
-			int len = slots.length;
-			System.out.println("For Bike Parking(BASMENT-1):  Avialable slots are: " + (len - noOfBikes));
-			for(int i  = noOfBikes; i < slots.length; i++) {
+			//int len = slots.length;
+			int len = lst1.size();
+			//String [] update = new String [len];
+			//System.out.println("For Bike Parking(BASMENT-1):  Avialable slots are: " + (len));
+//			for(int i  = 0; i < update.length; i++) {
+//				
+//				
+//				//System.out.print(+ "  ");
+//				update[i] = slots[i];
+//				
+//			}
+//			System.out.println();
+//			
+//			for(int j = 0; j < update.length; j++) {
+//				
+//				slots[j] = update[j];
+//			}
+			
+			System.out.println("For Bike Parking(BASMENT-1):  Avialable slots are: " + (len));
+			
+			for(int j = 0; j < len; j++) {
 				
+				System.out.print(lst1.get(j)+ "  ");
 				
-				System.out.println("slot-" + (i + 1) + "   ");
-				
+				//slots[j] = update[j];
 			}
-		
 		
 		}
 		
 		
 		
-		public void cars(int noOfcars) {
-			
-			
-			String [] slots2 = new String[15];
-			this.noOfCars = noOfCars;
-			
-			System.out.println("For Car Parking(BASMENT-1):  Total slots are: " + slots2.length);
-			for(int i = 0; i < slots2.length; i++) {
-			
-				System.out.println("slot-" + (i + 1) + "   ");
-			
-			}
-		
-			System.out.println("\nOccupied slots By(CARS, BASEMENT-1): ");
-			for(int i = 0; i < noOfCars; i++) {
-			
-				slots2[i] = "Occupied !";
-			
-				System.out.println("slot-" + (i + 1) + " : " + slots2[i] + "Cars - " + (i + 1));
-			
-			
-			}
-			
-			int len = slots2.length;
-			System.out.println("For Car Parking(BASMENT-1):  Avialable slots are: " + (len - noOfCars));
-			for(int i  = noOfCars; i < slots2.length; i++) {
-				
-				
-				System.out.println("slot-" + (i + 1) + "   ");
-				
-			}
-			
-		}
+
 		
 		
 		public void vechileDetails() {
