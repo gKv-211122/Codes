@@ -4,63 +4,49 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Basement1 {
 			
-		//String [] slots = {"s-1", "s-2", "s-3", "s-4", "s-5", "s-6", "s-7", "s-8","s-9", "s-10", "s-11", "s-12", "s-13", "s-14", "s-15"};
 		
-		List<String> lst1 = new ArrayList<String>(Arrays.asList("s-1", "s-2", "s-3", "s-4", "s-5", "s-6", "s-7", "s-8",
-				"s-9", "s-10", "s-11", "s-12", "s-13", "s-14", "s-15"));
+		
+		ArrayList<String> lst1 = new ArrayList<String>(Arrays.asList("s1", "s2", "s3", "s4", "s5", "s6", "s7", "s8",
+				"s9", "s10", "s11", "s12", "s13", "s14", "s15"));
+		
+		Map<String, String> map = new HashMap<>();
+		
+		
+			      
+			      
+	
 		
 		public String vehicleId;
-		public int slotChosenByUser;
+		public String slotChosenByUser;
 	
-		public void bikeSlots(int slotChosenByUser, String vehicleId) {
+		public void bikeSlots(String slotChosenByUser, String vehicleId) {
 			
 			
 			this.slotChosenByUser = slotChosenByUser;
 			this.vehicleId = vehicleId;
 		
-			System.out.println("\nOccupied slots By(BIKES, BASEMENT-1:) ");
+			System.out.println("\nOccupied slots By(BIKES, BASEMENT-1): ");
 			
 			//slots[slotChosenByUser - 1] = "Occupied ! [" + vehicleId + "]";
-			//System.out.println("s-" + (slotChosenByUser) + " : " + slots[slotChosenByUser - 1] + "Bike Id - " + vehicleId);
-			System.out.println("s-" + (slotChosenByUser) + " : " + lst1.get(slotChosenByUser - 1) + "Bike Id - " + vehicleId);
-			
-			// remove occupied slot
-//			List<String> list = new ArrayList<String>(Arrays.asList(slots));
-//			list.remove(slotChosenByUser - 1);
-//			
-//			slots = list.toArray(new String[0]);
-			lst1.remove(slotChosenByUser - 1);
+			System.out.println("s-" + (slotChosenByUser) + " : "  + "Bike Id - " + vehicleId);
 			
 			
-			//int len = slots.length;
-			int len = lst1.size();
-			//String [] update = new String [len];
-			//System.out.println("For Bike Parking(BASMENT-1):  Avialable slots are: " + (len));
-//			for(int i  = 0; i < update.length; i++) {
-//				
-//				
-//				//System.out.print(+ "  ");
-//				update[i] = slots[i];
-//				
-//			}
-//			System.out.println();
-//			
-//			for(int j = 0; j < update.length; j++) {
-//				
-//				slots[j] = update[j];
-//			}
+			lst1.remove(slotChosenByUser);
+			ArrayList<String> lst2 = new ArrayList<>(lst1);
+			 
+			System.out.println("For Bike Parking(BASMENT-1):  Avialable slots are: " + (lst2.size()));
 			
-			System.out.println("For Bike Parking(BASMENT-1):  Avialable slots are: " + (len));
-			
-			for(int j = 0; j < len; j++) {
+			for(int j = 0; j < lst2.size(); j++) {
 				
-				System.out.print(lst1.get(j)+ "  ");
+				System.out.print(lst2.get(j)+ "  ");
 				
-				//slots[j] = update[j];
+			
 			}
 		
 		}

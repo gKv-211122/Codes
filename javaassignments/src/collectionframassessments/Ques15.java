@@ -9,7 +9,7 @@ public class Ques15 {
 	public String userName;
 	public char vehicleType;
 	public String vehicleId;
-	public int slot;
+	public String slot;
 	
 	
 	public void takeUserData() {
@@ -21,7 +21,7 @@ public class Ques15 {
 		this.userName = sc.next();
 		this.vehicleType = sc.next().charAt(0);
 		this.vehicleId = sc.next();
-		this.slot = sc.nextInt();
+		this.slot = sc.next();
 		
 		
 	}
@@ -84,7 +84,7 @@ public class Ques15 {
 				case 'c':
 					Basement2 bs2 = new Basement2();
 					
-					bs2.carSlots(obj.slot);
+					//bs2.carSlots(obj.slot);
 				
 					break;
 					
