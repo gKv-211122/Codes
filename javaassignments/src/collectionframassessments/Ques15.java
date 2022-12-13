@@ -38,6 +38,7 @@ public class Ques15 {
 			3. allocate a vehicles with slots and generate a receipt and don't allocate a 
 			single slot for two vehicles
 			4. and store the data in a file			*/
+		
 		Ques15 obj = new Ques15();
 		
 		Scanner sc = new Scanner(System.in);
@@ -84,7 +85,7 @@ public class Ques15 {
 				case 'c':
 					Basement2 bs2 = new Basement2();
 					
-					//bs2.carSlots(obj.slot);
+					bs2.carSlots(obj.slot, obj.vehicleId);
 				
 					break;
 					

@@ -1,41 +1,43 @@
 package collectionframassessments;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class Basement2 {
 	
-	String [] slots2 = new String[15];
-	public int noOfCars;
+	ArrayList<String> lst1 = new ArrayList<String>(Arrays.asList("s1", "s2", "s3", "s4", "s5", "s6", "s7", "s8",
+			"s9", "s10", "s11", "s12", "s13", "s14", "s15"));
+	
+	
+	public String vehicleId;
+	public String slotChosenByUser;
+	
 
-	public void carSlots(int noOfcars) {
+	public void carSlots(String slotChosenByUser, String vehicleId) {
 		
-		this.noOfCars = noOfcars;
-		
-//		System.out.println("\n");
-//		System.out.println("For Car Parking(BASMENT-2):  Total slots are: " + slots2.length);
-//		for(int i = 0; i < slots2.length; i++) {
-//		
-//			System.out.print("s-" + (i + 1) + "   ");
-//		
-//		}
+		this.slotChosenByUser = slotChosenByUser;
+		this.vehicleId = vehicleId;
 	
 		System.out.println("\nOccupied slots By(CARS, BASEMENT-2): ");
-		for(int i = 0; i < noOfCars; i++) {
 		
-			slots2[i] = "Occupied !";
+		//slots[slotChosenByUser - 1] = "Occupied ! [" + vehicleId + "]";
+		System.out.println("s-" + (slotChosenByUser) + " : "  + "Car Id - " + vehicleId);
+		
+		
+		lst1.remove(slotChosenByUser);
+		
+		 
+		System.out.println("For Car Parking(BASMENT-2):  Avialable slots are: " + (lst1.size()));
+		
+		for(int j = 0; j < lst1.size(); j++) {
 			
-			System.out.println("s-" + (i + 1) + " : " + slots2[i] + "Car - " + (i + 1));
-		
+			System.out.print(lst1.get(j)+ "  ");
+			
 		
 		}
 		
-		int len = slots2.length;
-		System.out.println("For Car Parking(BASMENT-2):  Avialable slots are: " + (len - noOfCars));
-		for(int i  = noOfCars; i < slots2.length; i++) {
-			
-			
-			System.out.print("s-" + (i + 1) + "  ");
-			
-		}
-		System.out.println();
+		lst1.remove(slotChosenByUser);
+	
 		
 	}
 	
