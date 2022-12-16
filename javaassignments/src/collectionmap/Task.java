@@ -12,9 +12,9 @@ public class Task {
 		HashMap<String, String> bookList = new HashMap<String, String>();
 		
 		bookList.put("Book1", "A");
-		bookList.put("Book2", "A");
-		bookList.put("Book3", "A");
-		bookList.put("Book4", "A");
+		bookList.put("Book2", "B");
+		bookList.put("Book3", "C");
+		bookList.put("Book4", "D");
 		
 
 		Iterator<Entry<String, String>> iterate = bookList.entrySet().iterator();
@@ -31,9 +31,10 @@ public class Task {
 		// Change The Author Name
 		Iterator<String> iterate2 = bookList.keySet().iterator();
 		while(iterate2.hasNext()) {
-		      if(bookList.containsValue("A")) {
+			String s = iterate2.next();
+		      if(s.equalsIgnoreCase("Book4")) {
 		    	  
-		    	  bookList.replace(iterate2.next(), "changeAuthor");
+		    	  bookList.replace(s, "changeAuthor");
 		    	 
 		      }
 		      

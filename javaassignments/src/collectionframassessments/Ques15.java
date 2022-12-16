@@ -18,10 +18,6 @@ public class Ques15 {
 		
 		char vehicleType;
 		
-			//do {
-		
-		//System.out.println("\n|| Want To Park The vehicle, Please Enter , \"y\" and Enter n, -- To EXit From The Parking ||");
-		//
 		System.out.println("Enter b, For BASEMENT-1, Enter c, For BASEMENT-2");
 		vehicleType = sc.next().charAt(0);
 		
@@ -51,20 +47,8 @@ public class Ques15 {
 		
 			}
 			
-//			System.out.println("\n|| Want To Park The vehicle, Please Enter , \"y\" and Enter n, -- To EXit From The Parking ||");
-//			ch = sc.next().charAt(0);
-//			
-//			if(ch == 'n') {
-//				
-//				System.out.println("You are successfully Exited From  Parking !!");
-//				System.exit(0);
-//				
-//			}
-//		
-//		
-//		}while(ch == 'y');
-//		
-//		
+
+	
 		
 		
 		

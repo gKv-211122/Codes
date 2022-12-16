@@ -29,9 +29,9 @@ public class Basement2 {
 				lst1.remove(p.slotChosenByUser);
 				
 				System.out.println("\nSlot Booked By(CARS, BASEMENT-2): ");
-				System.out.println((p.slotChosenByUser) + " : "  + "Bike Id - " + p.vehicleId);
+				System.out.println((p.slotChosenByUser) + " : "  + "Car Id - " + p.vehicleId);
 				
-				System.out.println("\nFor Car Parking(BASMENT-1):  Avialable slots are: " + (lst1.size()));
+				System.out.println("\nFor Car Parking(BASMENT-2):  Avialable slots are: " + (lst1.size()));
 				
 				Iterator<String> iterate = lst1.iterator();
 				while(iterate.hasNext()){
@@ -41,7 +41,7 @@ public class Basement2 {
 			}else {
 		
 				System.out.println("slot already booked, Please Choose Another Slot");
-				System.out.println("For Car Parking(BASMENT-1):  Avialable slots are: " + (lst1.size()));
+				System.out.println("For Car Parking(BASMENT-2):  Avialable slots are: " + (lst1.size()));
 				
 				Iterator<String> iterate = lst1.iterator();
 				while(iterate.hasNext()){

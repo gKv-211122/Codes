@@ -1,37 +1,42 @@
 package multithreadingassessments;
 
+import java.io.FileReader;
+import java.io.IOException;
+
 public class Ques3 extends Thread {
 	
-	public void run() {
+	public static void main(String[] args) {
 		
-		for(int i = 0; i < 7; i++) {
+		try {
+			int a = 10/0;
 			
-			try {
-				
-				Thread.sleep(500);
-				
-			}catch(InterruptedException e) {
-				 
-				System.out.println(e);
-				
-			}catch(Exception e) {
-				
-				System.out.println(e);
-			}
+			int arr[] = new int[5];
 			
-			System.out.println(i);
+			arr[5]=56;
+			
+			FileReader fr = new FileReader("Test.txt");
+			
+			
+			System.out.println(fr.read());
+			
+					
+		}
+		catch(ArithmeticException a) {
+			System.out.println("Exception" +a.getMessage());
+		}
+		catch(ArrayIndexOutOfBoundsException ar) {
+			System.out.println("Exception" +ar.getMessage());
+		}
+		catch(IOException io) {
+			System.out.println("Exception" +io.getMessage());
+		}
+		catch(Exception e) {
+			System.out.println("Exception" +e.getMessage());
+		}
+		finally {
+			System.out.println("all exception are handled");
 		}
 		
-	}
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
-		Thread t = new Thread();
-		t.start();
-		
-		
-
 	}
 
 }
